@@ -124,6 +124,7 @@ h1, .h1 {
   margin: 8px 0;
 }
 .project-link {
+  position: relative;
   display: inline-block;
   background-color: #000;
   color: #fff;
@@ -135,6 +136,7 @@ h1, .h1 {
 }
 .project-link:hover {
   text-decoration: underline;
+  bottom: 4px;
 }
 .project-technology-list {
   margin: 0;
@@ -152,4 +154,37 @@ h1, .h1 {
 }
 .project-technology-list li:last-child {
   margin-right: 0;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip-message {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  width: 150%;
+  max-width: 320px;
+}
+.tooltip:hover .tooltip-message {
+  display: inline-block;
+}
+.float-row {
+  margin: 0 -16px;
+}
+.float-row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.float-column {
+  float: left;
+  width: calc(50% - 32px);
+  margin: 0 16px;
 }
