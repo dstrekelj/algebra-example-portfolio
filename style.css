@@ -101,11 +101,11 @@ h1, .h1 {
   border: 8px solid black;
   border-bottom: 8px double black;
   border-top: 8px double black;
-/*   box-shadow:
-    -10px 0px 0px 0px red,
-    -20px 0px 0px 0px green,
-    -30px 0px 0px 0px blue,
-    -40px 0px 0px 0px yellow; */
+  transition: transform 1s ease;
+}
+.profile-image:hover {
+  transform: rotate(1turn);
+  transition: transform 2s ease;
 }
 .project {
   box-sizing: border-box;
@@ -133,8 +133,13 @@ h1, .h1 {
   font-size: 1rem;
   line-height: 1;
   padding: 12px 16px;
+  bottom: 0;
+  transition:
+    bottom 0.3s ease,
+    background-color 0.3s ease 0.3s;
 }
 .project-link:hover {
+  background-color: darkblue;
   text-decoration: underline;
   bottom: 4px;
 }
