@@ -270,6 +270,20 @@ h1, .h1 {
   flex-grow: 1;
   margin-left: 32px;
 }
+@media screen and (max-width: 768px) {
+  .profile-image {
+    width: 240px;
+    height: 240px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-description {
+    margin-left: 0;
+    text-align: center;
+  }
+}
 .fancy-button {
   box-sizing: border-box;
   display: inline-block;
@@ -307,4 +321,45 @@ h1, .h1 {
 }
 .fancy-button:hover {
   color: black;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.blinking {
+  animation: blink 0.5s ease-in-out 0s infinite alternate forwards;
+}
+
+@keyframes spin-left-right {
+  0% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(1turn);
+  }
+  100% {
+    transform: rotate(0turn);
+  }
+}
+.spin-left-right {
+  animation: spin-left-right 2s ease 0s 1 forwards;
+}
+
+@keyframes ascend-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ascend-in {
+  animation: ascend-in 2s ease 0s 1 forwards;
 }
