@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+.header-image {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.header-description {
+  flex-grow: 1;
+  margin-left: 32px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    text-align: center;
+  }
+}
