@@ -1,9 +1,9 @@
 .header {
   display: flex;
   flex-flow: row nowrap;
-  @media screen and (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
+  @include mq () {
+    flex-direction: column;
+    align-items: center;
   }
 }
 .header-image {
@@ -13,7 +13,7 @@
 .header-description {
   flex-grow: 1;
   margin-left: 32px;
-  @media screen and (max-width: 768px) {
+  @include mq() {
     margin-left: 0;
     text-align: center;
   }

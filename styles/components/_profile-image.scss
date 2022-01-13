@@ -1,8 +1,7 @@
 .profile-image {
+  @include box($size: 300px);
   box-sizing: border-box;
   display: block;
-  width: 300px;
-  height: 300px;
   object-fit: cover;
   object-position: -36px center;
   border-radius: 100%;
